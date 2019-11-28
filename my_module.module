@@ -1,0 +1,15 @@
+<?php
+/*Hook_menu()*/
+function my_module_menu() {
+	$items = array();
+
+	$items['my-page'] = array(
+		'title'	=>	'my page',
+		'page callback' => 'my_first_page',
+		'access callback' => TRUE
+	);
+	return $items;
+}
+function my_first_page() {
+	return t('hello world');
+}
